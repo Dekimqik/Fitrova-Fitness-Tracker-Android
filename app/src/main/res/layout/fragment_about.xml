@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fitness.fitrova.fragment.FTWalletFragment">
+
+    <LinearLayout
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/about"/>
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_marginLeft="@dimen/padding_15dp"
+            android:layout_marginRight="@dimen/padding_15dp"
+            android:layout_below="@id/tvTitle"/>
+
+        <ImageView
+            android:id="@+id/ivMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/frv_mark" />
+
+        <TextView
+            android:id="@+id/tvAbout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tvAbout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:maxLength="40"
+            android:maxLines="3"/>
+        <TextView
+            android:id="@+id/tvAbout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/tvAbout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:maxLines="1"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tvAbout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:text=""/>
+    </LinearLayout>
+</FrameLayout>

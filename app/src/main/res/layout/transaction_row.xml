@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/cardView"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	card_view:cardUseCompatPadding="true"
+	android:layout_marginBottom="20dp"
+	card_view:cardBackgroundColor="@android:color/transparent"
+	card_view:cardElevation="0dp">
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_marginLeft="10dp"
+		android:layout_weight="4">
+
+		<TextView
+			android:id="@+id/tvTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:text="30 Minutes Ago"
+			android:textColor="@color/colorCyan"
+			android:textSize="@dimen/padding_20dp"/>
+
+		<TextView
+			android:id="@+id/tvTransaction"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:maxLines="1"
+			android:text="SENT"
+			android:textSize="@dimen/padding_25dp"
+			android:textAlignment="center"/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center|right"
+		android:layout_marginRight="20dp"
+		android:layout_weight="1.5"
+		android:gravity="center"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:id="@+id/tvAmount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="0.013"
+			android:textSize="@dimen/padding_20dp"/>
+
+		<TextView
+			android:id="@+id/tvFRV"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:text="FRV"
+			android:textColor="@color/yellow_A200"
+			android:textSize="@dimen/padding_25dp"/>
+
+	</LinearLayout>
+</android.support.v7.widget.CardView>

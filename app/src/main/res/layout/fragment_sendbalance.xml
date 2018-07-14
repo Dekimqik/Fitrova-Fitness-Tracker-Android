@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fitness.fitrova.fragment.FTSendBalanceFragment">
+
+    <LinearLayout
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/ivTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_20dp"
+            android:layout_gravity="center"
+            android:text="Send Balance"
+            android:textSize="@dimen/padding_25dp"/>
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_marginLeft="@dimen/padding_15dp"
+            android:layout_marginRight="@dimen/padding_15dp"
+            android:layout_below="@id/tvTitle"/>
+
+        <ImageView
+            android:id="@+id/ivMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/frv_mark"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/ivMark">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                android:layout_centerInParent="true"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet Address"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="@dimen/padding_15dp"
+                    android:paddingTop="7.5dp"
+                    android:paddingBottom="7.5dp"
+                    android:background="@drawable/round_corner_blue"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/etWalletAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorTransparent"
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        android:inputType="text"
+                        android:textColorHint="@color/grey_100"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/padding_20dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Amount"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/round_corner_blue"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlleft"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentBottom="true">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/etAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTransparent"
+                            android:maxLines="1"
+                            android:maxLength="30"
+                            android:textColorHint="@color/grey_100"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/padding_20dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignRight="@id/rlleft"
+                        android:paddingLeft="@dimen/padding_20dp"
+                        android:paddingRight="@dimen/padding_20dp"
+                        android:background="@drawable/round_corner_wallet_confirm"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorTransparent"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:hint="@string/frv"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/padding_20dp"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:paddingLeft="@dimen/padding_40dp"
+                    android:paddingRight="@dimen/padding_40dp"
+                    android:paddingTop="7.5dp"
+                    android:paddingBottom="7.5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/round_corner_register"
+                    android:clickable="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/confirm"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/padding_20dp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

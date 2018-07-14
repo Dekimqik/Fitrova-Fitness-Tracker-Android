@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fitness.fitrova.fragment.FTLogFragment">
+
+    <LinearLayout
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivTitle"
+            android:layout_width="@dimen/padding_50dp"
+            android:layout_height="@dimen/padding_50dp"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/log"/>
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_marginLeft="@dimen/padding_15dp"
+            android:layout_marginRight="@dimen/padding_15dp"
+            android:layout_below="@id/tvTitle"/>
+
+        <ListView
+            android:id="@+id/rvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:divider="@color/grey_700"
+            android:dividerHeight="0.5dp" >
+        </ListView>
+
+    </LinearLayout>
+</FrameLayout>

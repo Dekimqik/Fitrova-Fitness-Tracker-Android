@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fitness.fitrova.activity.FTRegisterActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"/>
+
+    <ImageView
+        android:id="@+id/ivMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/welcome"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivMark"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:background="@drawable/circle"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user"
+                    android:clickable="true"
+                    android:onClick="onProfileClicked"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:paddingLeft="@dimen/padding_15dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:background="@drawable/round_corner_blue"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:textColorHint="@color/grey_100"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/padding_15dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:background="@drawable/round_corner_blue"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:inputType="text"
+                    android:hint="@string/full_name"
+                    android:textColorHint="@color/grey_100"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/padding_15dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:background="@drawable/round_corner_blue"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:inputType="textPassword"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/grey_100"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/padding_15dp"
+                android:paddingTop="@dimen/padding_10dp"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:background="@drawable/round_corner_blue"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparent"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:inputType="textPassword"
+                    android:hint="@string/confirm_password"
+                    android:textColorHint="@color/grey_100"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_20dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_50dp"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_corner_register"
+                android:clickable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_20dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/padding_10dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/round_corner_login"
+                android:clickable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/padding_20dp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
